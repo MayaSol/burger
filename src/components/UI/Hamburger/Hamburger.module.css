@@ -1,0 +1,57 @@
+.Hamburger {
+  width: 50px;
+  height: 30px;
+  display: block;
+  float: left;
+  margin-right: 60px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  border: none;
+  padding: 0;
+  line-height: 30px;
+  background: transparent;
+  user-select: none;
+  color: #fff;
+  transition: background 1s 1s;
+}
+
+.Hamburger > span {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 6px;
+  vertical-align: top;
+  font-size: 0;
+  background: currentColor;
+}
+
+.Hamburger > span::before,
+.Hamburger > span::after
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  right: 0;
+  height: 6px;
+  background: currentColor;
+  transform-origin: 50% 50%;
+  transition: top 1s 1s, transform 1s;
+}
+
+.Hamburger > span::before {
+  top: 12px;
+}
+
+.Hamburger > span::after
+{
+  top: 24px;
+}
+
+
+@media (min-width: 500px) {
+  .Hamburger {
+    display: none;
+  }
+}
